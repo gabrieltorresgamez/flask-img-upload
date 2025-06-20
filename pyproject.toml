@@ -1,0 +1,12 @@
+[project]
+name = "flask-img-upload"
+version = "0.0.1"
+description = "A simple Flask web application that allows users to upload images to an S3-compatible storage service with categorization."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.35.0",
+    "dotenv>=0.9.9",
+    "flask>=3.1.1",
+    "ruff>=0.12.0",
+]
