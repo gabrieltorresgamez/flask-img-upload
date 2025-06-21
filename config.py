@@ -5,6 +5,9 @@ load_dotenv()
 
 
 class AppConfig:
+    if not os.path.exists('.env'):
+        raise FileNotFoundError("The .env file is missing. Please copy the .env.example file to .env and fill in the required values.")
+
     S3_ENDPOINT_URL = os.environ.get("S3_ENDPOINT_URL")
     AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
     AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
